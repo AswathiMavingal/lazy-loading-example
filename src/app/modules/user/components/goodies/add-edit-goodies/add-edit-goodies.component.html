@@ -1,0 +1,173 @@
+<div
+  class="modal"
+  id="myModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="myModalLabel"
+  aria-hidden="true"
+  #myModal
+>
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="myModalLabel">Bootstrap Modal</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+          (click)="closeModal()"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- Your modal content goes here -->
+        <form>
+          <div class="input-group">
+            <span class="input-group-text">First and last name</span>
+            <input type="text" aria-label="First name" class="form-control" />
+            <input type="text" aria-label="Last name" class="form-control" />
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">@</span>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Username"
+              aria-label="Username"
+              aria-describedby="basic-addon1"
+            />
+          </div>
+
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Recipient's username"
+              aria-label="Recipient's username"
+              aria-describedby="basic-addon2"
+            />
+            <span class="input-group-text" id="basic-addon2">@example.com</span>
+          </div>
+
+          <div class="mb-3">
+            <label for="basic-url" class="form-label">Your vanity URL</label>
+            <div class="input-group">
+              <span class="input-group-text" id="basic-addon3"
+                >https://example.com/users/</span
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="basic-url"
+                aria-describedby="basic-addon3 basic-addon4"
+              />
+            </div>
+            <div class="form-text" id="basic-addon4">
+              Example help text goes outside the input group.
+            </div>
+          </div>
+
+          <div class="input-group mb-3">
+            <span class="input-group-text">$</span>
+            <input
+              type="text"
+              class="form-control"
+              aria-label="Amount (to the nearest dollar)"
+            />
+            <span class="input-group-text">.00</span>
+          </div>
+
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Username"
+              aria-label="Username"
+            />
+            <span class="input-group-text">@</span>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Server"
+              aria-label="Server"
+            />
+          </div>
+
+          <div class="input-group">
+            <span class="input-group-text">With textarea</span>
+            <textarea
+              class="form-control"
+              aria-label="With textarea"
+            ></textarea>
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-text">
+              <input
+                class="form-check-input mt-0"
+                type="checkbox"
+                value=""
+                aria-label="Checkbox for following text input"
+              />
+            </div>
+            <input
+              type="text"
+              class="form-control"
+              aria-label="Text input with checkbox"
+            />
+          </div>
+
+          <div class="input-group">
+            <div class="input-group-text">
+              <input
+                class="form-check-input mt-0"
+                type="radio"
+                value=""
+                aria-label="Radio button for following text input"
+              />
+            </div>
+            <input
+              type="text"
+              class="form-control"
+              aria-label="Text input with radio button"
+            />
+          </div>
+
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control"
+              aria-label="Text input with dropdown button"
+            />
+            <button
+              class="btn btn-outline-secondary dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Dropdown
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="#">Separated link</a></li>
+            </ul>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-secondary"
+          (click)="closeModal()"
+          data-dismiss="modal"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
