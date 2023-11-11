@@ -22,44 +22,26 @@
       <td class="table-active">Personal Email</td>
       <td class="table-active">Mobile</td>
       <td class="table-active">Skills</td>
+      <td class="table-active">Actions</td>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>First Name sample</td>
-      <td>Last Name</td>
-      <td>Developer</td>
-      <td>123</td>
-      <td>Female</td>
-      <td>test ,gdhjg</td>
-      <td>user1@test.com</td>
-      <td>user1@gmail.com</td>
-      <td>9496757563</td>
-      <td>Java</td>
-    </tr>
-    <tr>
-      <td>First Name sample</td>
-      <td>Last Name</td>
-      <td>Developer</td>
-      <td>123</td>
-      <td>Female</td>
-      <td>test ,gdhjg</td>
-      <td>user1@test.com</td>
-      <td>user1@gmail.com</td>
-      <td>9496757563</td>
-      <td>Java</td>
-    </tr>
-    <tr>
-      <td>First Name sample</td>
-      <td>Last Name</td>
-      <td>Developer</td>
-      <td>123</td>
-      <td>Female</td>
-      <td>test ,gdhjg</td>
-      <td>user1@test.com</td>
-      <td>user1@gmail.com</td>
-      <td>9496757563</td>
-      <td>Java</td>
+    <tr *ngFor="let employee of employees; index as i">
+      <td>{{ employee.firstName }}</td>
+      <td>{{ employee.lastName }}</td>
+      <td>{{ employee.designation }}</td>
+      <td>{{ employee.empId }}</td>
+      <td>{{ employee.gender }}</td>
+      <td>{{ employee.address }}</td>
+      <td>{{ employee.emailOffice }}</td>
+      <td>{{ employee.emailPersonal }}</td>
+      <td>{{ employee.mobileNum }}</td>
+      <td>{{ employee.skills }}</td>
+      <td>
+        <button (click)="deleteEmployee(i)"><i class="bi bi-trash"></i></button
+        >&nbsp;
+        <button (click)="editEmployee(i)"><i class="bi bi-pencil"></i></button>
+      </td>
     </tr>
   </tbody>
 </table>

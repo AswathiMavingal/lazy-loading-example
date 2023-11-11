@@ -9,6 +9,9 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import {
+  HttpClientModule /*, HttpClient, HTTP_INTERCEPTORS */,
+} from '@angular/common/http';
 // import { EmployeesComponent } from './shared/employees/employees.component';
 // import { SharedModule } from './shared/shared.module';
 // import { AddEditEmployeeComponent } from './shared/employees/add-edit-employee/add-edit-employee.component';
@@ -28,6 +31,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     NgbModule,
     FontAwesomeModule,
     ReactiveFormsModule,
+    HttpClientModule,
+
     // SharedModule,
   ],
   providers: [],

@@ -13,161 +13,172 @@
         <h5 class="modal-title" id="myModalLabel">Add/Edit Employee</h5>
         <button
           type="button"
-          class="close"
+          class="btn btn-close"
           data-dismiss="modal"
           aria-label="Close"
           (click)="closeModal()"
-        >
-          <span aria-hidden="true">&times;</span>
-        </button>
+        ></button>
       </div>
-      <div class="modal-body">
-        <!-- Your modal content goes here -->
-        <form>
-          <div class="input-group">
-            <span class="input-group-text">First and last name</span>
-            <input type="text" aria-label="First name" class="form-control" />
-            <input type="text" aria-label="Last name" class="form-control" />
+      <form [formGroup]="emplyeeForm" (ngSubmit)="onSubmit()">
+        <div class="modal-body">
+          <!-- Your modal content goes here -->
+          <div class="mb-3">
+            <label for="basic-url" class="form-label">Name</label>
+            <div class="input-group">
+              <span class="input-group-text">First and last name</span>
+              <input
+                type="text"
+                aria-label="First name"
+                formControlName="firstName"
+                class="form-control"
+              />
+              <input
+                type="text"
+                aria-label="Last name"
+                formControlName="lastName"
+                class="form-control"
+              />
+            </div>
           </div>
-          <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1">@</span>
+          <div class="mb-3">
+            <label>Designation</label>
             <input
               type="text"
               class="form-control"
-              placeholder="Username"
-              aria-label="Username"
-              aria-describedby="basic-addon1"
+              placeholder="Enter Designation"
+              area-label="Designation"
+              formControlName="designation"
             />
           </div>
-
-          <div class="input-group mb-3">
+          <div class="mb-3">
+            <label>Employee Id</label>
             <input
               type="text"
               class="form-control"
-              placeholder="Recipient's username"
-              aria-label="Recipient's username"
-              aria-describedby="basic-addon2"
+              placeholder="Enter Employee Id"
+              area-label="EmpId"
+              formControlName="empId"
             />
-            <span class="input-group-text" id="basic-addon2">@example.com</span>
           </div>
 
           <div class="mb-3">
-            <label for="basic-url" class="form-label">Your vanity URL</label>
+            <label for="basic-url" class="form-label">Gender</label>
             <div class="input-group">
-              <span class="input-group-text" id="basic-addon3"
-                >https://example.com/users/</span
-              >
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="gender"
+                  id="male"
+                  value="male"
+                  formControlName="gender"
+                />
+                <label class="form-check-label" for="inlineRadio1">Male</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="gender"
+                  id="female"
+                  value="female"
+                  formControlName="gender"
+                />
+                <label class="form-check-label" for="inlineRadio2"
+                  >Female</label
+                >
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="gender"
+                  id="others"
+                  value="others"
+                  formControlName="gender"
+                />
+                <label class="form-check-label" for="inlineRadio3"
+                  >Others</label
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="address" class="form-label">Address</label>
+            <textarea
+              class="form-control"
+              id="address"
+              rows="5"
+              formControlName="address"
+            ></textarea>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Office Email</label>
+            <div class="input-group">
               <input
                 type="text"
                 class="form-control"
-                id="basic-url"
-                aria-describedby="basic-addon3 basic-addon4"
+                placeholder="Office Email"
+                aria-label="officeEmail"
+                formControlName="emailOffice"
               />
+              <span class="input-group-text" id="basic-addon2"
+                >@example.com</span
+              >
             </div>
-            <div class="form-text" id="basic-addon4">
-              Example help text goes outside the input group.
-            </div>
+            <div class="form-text" id="basic-addon4">Eg:user@example.com</div>
           </div>
 
-          <div class="input-group mb-3">
-            <span class="input-group-text">$</span>
-            <input
-              type="text"
-              class="form-control"
-              aria-label="Amount (to the nearest dollar)"
-            />
-            <span class="input-group-text">.00</span>
-          </div>
-
-          <div class="input-group mb-3">
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Username"
-              aria-label="Username"
-            />
-            <span class="input-group-text">@</span>
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Server"
-              aria-label="Server"
-            />
-          </div>
-
-          <div class="input-group">
-            <span class="input-group-text">With textarea</span>
-            <textarea
-              class="form-control"
-              aria-label="With textarea"
-            ></textarea>
-          </div>
-          <div class="input-group mb-3">
-            <div class="input-group-text">
+          <div class="mb-3">
+            <label class="form-label">Personal Email</label>
+            <div class="input-group">
+              <span class="input-group-text" id="basic-addon2">@</span>
               <input
-                class="form-check-input mt-0"
-                type="checkbox"
-                value=""
-                aria-label="Checkbox for following text input"
+                type="text"
+                class="form-control"
+                placeholder="Personal Email"
+                aria-label="personalEmail"
+                formControlName="emailPersonal"
               />
             </div>
+          </div>
+          <div class="mb-3">
+            <label>Mobile</label>
             <input
               type="text"
               class="form-control"
-              aria-label="Text input with checkbox"
+              placeholder="Enter Designation"
+              area-label="Designation"
+              formControlName="mobileNum"
             />
           </div>
-
-          <div class="input-group">
-            <div class="input-group-text">
-              <input
-                class="form-check-input mt-0"
-                type="radio"
-                value=""
-                aria-label="Radio button for following text input"
-              />
-            </div>
-            <input
+          <div class="mb-3">
+            <label class="form-label">Skills</label>
+            <select
               type="text"
               class="form-control"
-              aria-label="Text input with radio button"
-            />
-          </div>
-
-          <div class="input-group mb-3">
-            <input
-              type="text"
-              class="form-control"
-              aria-label="Text input with dropdown button"
-            />
-            <button
-              class="btn btn-outline-secondary dropdown-toggle"
-              type="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
+              placeholder="Select Skillset"
+              formControlName="skills"
+              multiple
             >
-              Dropdown
-            </button>
-            <ul class="dropdown-menu dropdown-menu-end">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-              <li><hr class="dropdown-divider" /></li>
-              <li><a class="dropdown-item" href="#">Separated link</a></li>
-            </ul>
+              <option *ngFor="let skill of skillList" [value]="skill">
+                {{ skill }}
+              </option>
+            </select>
           </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button
-          type="button"
-          class="btn btn-secondary"
-          (click)="closeModal()"
-          data-dismiss="modal"
-        >
-          Close
-        </button>
-      </div>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            (click)="closeModal()"
+            class="btn btn-secondary"
+          >
+            Cancel
+          </button>
+          <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+      </form>
     </div>
   </div>
 </div>

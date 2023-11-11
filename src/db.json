@@ -1,0 +1,53 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "employees": [
+    {
+      "firstName": "testERasdasd",
+      "lastName": "yuuRT",
+      "designation": "tester",
+      "empId": "1245",
+      "gender": "others",
+      "address": "sadasd,\ntest line1",
+      "emailOffice": "emailRR@test.com",
+      "emailPersonal": "test@email.com",
+      "mobileNum": "2345678909",
+      "skills": [
+        "Angular",
+        "React"
+      ],
+      "id": 1
+    },
+    {
+      "firstName": "sd",
+      "lastName": "dfg",
+      "designation": "dfgdfg",
+      "empId": "dfg",
+      "gender": "female",
+      "address": "dfgdfg",
+      "emailOffice": "dfg@gmail",
+      "emailPersonal": "dfh@gmail",
+      "mobileNum": "324344523455",
+      "skills": [
+        "Angular",
+        "React"
+      ],
+      "id": 2
+    }
+  ]
+}
