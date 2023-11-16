@@ -48,6 +48,22 @@
         "React"
       ],
       "id": 2
+    },
+    {
+      "firstName": "Vijesh",
+      "lastName": "Chandera",
+      "designation": "ceo",
+      "empId": "2344",
+      "gender": "male",
+      "address": "Hilite Metromax\nThondayad",
+      "emailOffice": "vijeshkumarcm@gmail.com",
+      "emailPersonal": "ertert@gmail",
+      "mobileNum": "08921485550",
+      "skills": [
+        "Angular",
+        "Javascript"
+      ],
+      "id": 3
     }
   ]
 }

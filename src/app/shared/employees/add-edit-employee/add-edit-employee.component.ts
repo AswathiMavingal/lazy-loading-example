@@ -42,15 +42,19 @@ export class AddEditEmployeeComponent implements OnDestroy {
     debugger;
   }
 
-  openModal() {
+  openModal(id?: number | null) {
     this.modal.nativeElement.style.display = 'block';
+    id ? this.setInputData(id) : this.emplyeeForm.reset();
   }
 
   closeModal() {
     this.modal.nativeElement.style.display = 'none';
   }
 
-  clearInput() {}
+  // clearInput() {
+  //   let empData = {};
+  //   this.emplyeeForm.patchValue(empData);
+  // }
   onSubmit() {
     // if (this.emplyeeForm.valid) {
     //   // const employee: Employee = { ...this.emplyeeForm.value };
@@ -81,7 +85,7 @@ export class AddEditEmployeeComponent implements OnDestroy {
     this.emplyeeForm.patchValue(empData);
   }
 
-  setInputData(prm: number | undefined) {
+  setInputData(prm?: number | null) {
     this.param = prm || undefined;
     if (this.param) {
       this._employee.getEmployee(this.param).subscribe({

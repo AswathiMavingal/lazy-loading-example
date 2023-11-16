@@ -25,8 +25,8 @@ export class EmployeesComponent implements OnInit {
     });
   }
 
-  openModal() {
-    this.modal.openModal();
+  openModal(id?: number | null) {
+    this.modal.openModal(id);
   }
 
   deleteEmployee(id: number) {
@@ -39,7 +39,7 @@ export class EmployeesComponent implements OnInit {
   }
 
   editEmployee(id: number) {
-    this.modal.openModal();
+    this.modal.openModal(id + 1);
     this.modal.setInputData(id + 1);
   }
 }
